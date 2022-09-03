@@ -1,0 +1,178 @@
+{
+    "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+
+    "palette": {
+        "jet":       "#111111",
+        "inkstone":  "#3b3b3b",
+        "slate":     "#5d5d5d",
+        "graphite":  "#666666",
+        "ash":       "#888888",
+        "silk":      "#cdcdcd",
+        "porcelain": "#f7f7f7",
+        "white":     "#ffffff",
+        "blue":      "#18b6ec",
+        "green":     "#3fb350",
+        "yellow":    "#F89A0F",
+        "orange":    "#EA5521",
+        "red":       "#EE3148",
+
+        "failure":     "p:red",
+        "success":   "p:green",
+        "time":      "p:blue",
+        "primary":   "p:inkstone",
+        "secondary": "p:inkstone",
+        "tertiary": "p:porcelain",
+        "accent-1":  "p:yellow",
+        "accent-2":  "p:orange"
+    },
+
+    "blocks": [
+        {
+            "type": "prompt",
+            "alignment": "left",
+            "newline": true,
+            "segments": [
+				{
+					"type": "text",
+					"template": "\ue200 ",
+
+					"style": "plain",
+					
+					"foreground": "p:secondary"
+				},
+                {
+                    "type": "exit",
+                    "template": "{{ if gt .Code 0 }}\uf00d<p:primary>{</>{{ .Code }}<p:primary>}</>{{ else }}\uf00c{{ end }}",
+                    "properties": {
+                        "always_enabled": true
+                    },
+
+                    "style": "plain",
+
+                    "foreground_templates": [
+                        "{{ if gt .Code 0 }}p:failure{{ else }}p:success{{ end }}"
+                    ]
+                },
+                {
+                    "type": "text",
+                    "template": " on",
+
+                    "style": "plain",
+
+                    "foreground": "p:primary"
+                },
+                {
+                    "type": "time",
+                    "template": " {{ .CurrentDate | date .Format }}",
+                    "properties": {
+                        "time_format": "Mon"
+                    },
+        
+                    "style": "plain",
+
+                    "background": "parentBackground",
+                    "foreground": "p:time"
+                },
+                {
+                    "type": "text",
+                    "template": ",",
+
+                    "style": "plain",
+
+                    "background": "parentBackground",
+                    "foreground": "p:primary"
+                },
+                {
+                    "type": "time",
+                    "template": " {{ .CurrentDate | date .Format }}",
+                    "properties": {
+                        "time_format": "Jan _2"
+                    },
+        
+                    "style": "plain",
+                    
+                    "background": "parentBackground",
+                    "foreground": "p:time"
+                },
+                {
+                    "type": "text",
+                    "template": " at",
+
+                    "style": "plain",
+
+                    "background": "parentBackground",
+                    "foreground": "p:primary"
+                },
+                {
+                    "type": "time",
+                    "template": " {{ .CurrentDate | date .Format }} ",
+                    "properties": {
+                        "time_format": "15:04:05"
+                    },
+        
+                    "style": "plain",
+
+                    "background": "parentBackground",
+                    "foreground": "p:time"
+                }
+            ]
+        },
+
+
+
+        {
+            "type": "prompt",
+            "alignment": "left",
+            "newline": true,
+            "segments": [
+                {
+                    "type": "session",
+                    "template": " <b>{{ .UserName }}</b><p:primary>@</>{{ .HostName }}",
+
+                    "style": "diamond",
+                    "leading_diamond": "<p:secondary>\u250c\u2500</>",
+
+                    "foreground": "p:accent-1"
+                },
+                {
+                    "type": "path",
+                    "template": " <p:primary>in</>  {{ .Path }} ",
+                    "properties": {
+                        "style": "agnoster_short",
+                        "folder_separator_icon": "/",
+                        "max_depth": 2
+                    },
+
+                    "style": "plain",
+
+                    "background": "parentBackground",
+                    "foreground": "p:accent-2"
+                }
+            ]
+        },
+
+
+
+        {
+            "type": "prompt",
+            "alignment": "left",
+            "newline": true,
+            "segments": [
+                {
+                    "type": "text",
+                    "template": "<p:secondary>\u2514\u2500\ue285</> <p:tertiary>$</>",
+
+                    "style": "plain",
+
+                    "foreground": "p:secodary"
+                }
+            ]
+        }
+    ],
+
+    
+    "console_title_template": "{{ .UserName }}@{{ .HostName }}",
+    "final_space": true,
+    "osc99": true,
+    "version": 2
+}

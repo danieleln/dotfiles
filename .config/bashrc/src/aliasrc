@@ -1,0 +1,33 @@
+#!/usr/bin/bash
+
+# options:
+#   -i: interactive mode
+#   -I: interactive mode, less aggressive
+#   -v: verbose
+#   -p: build also parent directories
+alias cp='cp -iv'
+alias mv='mv -iv'
+alias rm='rm -Iv'
+alias rmdir='rmdir -v'
+alias mkdir='mkdir -pv'
+
+# cd aliases
+alias ..='cd ..'
+alias ...='cd ../..'
+alias .1='cd ..'
+alias .2='cd ../..'
+alias .3='cd ../../..'
+alias .4='cd ../../../..'
+alias .5='cd ../../../../..'
+alias .6='cd ../../../../../..'
+alias .7='cd ../../../../../../..'
+
+# nvim aliases
+alias vi='nvim'
+alias vim='nvim'
+
+# cmd habits
+alias cls='clear'
+
+# wsl only aliases
+alias explorer='explorer.exe'

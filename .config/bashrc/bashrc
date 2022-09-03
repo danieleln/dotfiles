@@ -1,0 +1,15 @@
+#!/usr/bin/bash
+
+# path of the current script
+declare __HERE__=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+
+
+# file that contains all the alias
+source "${__HERE__}/src/aliasrc"
+
+# oh-my-posh setup file
+source "${__HERE__}/src/omprc"
+
+# general setup file
+source "${__HERE__}/src/setuprc"
+

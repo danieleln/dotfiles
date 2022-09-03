@@ -1,0 +1,9 @@
+#!/usr/bin/bash
+
+# enable vi(m) keys in terminal
+set -o vi
+
+
+# system logo
+clear
+neofetch

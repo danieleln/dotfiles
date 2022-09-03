@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =5
+let g:netrw_dirhist_5='/mnt/d/home/engineering/electronics/arduino/libs/metaio/src/depencencies'
+let g:netrw_dirhist_4='/mnt/d/projets/costs-slash/tests'
+let g:netrw_dirhist_3='/mnt/d/home/engineering/electronics/arduino/FastLED/allfxs/src/effects'
+let g:netrw_dirhist_2='/mnt/d/projets/pwm/tests'
+let g:netrw_dirhist_1='/mnt/d/projets/testunittest/tests'
+let g:netrw_dirhist_0='/mnt/d/projets/pwm/src/config'
+let g:netrw_dirhist_9='/mnt/s/windows/wsl/ubuntu/config/nvim'
+let g:netrw_dirhist_8='/mnt/s/windows/wsl/ubuntu/config/nvim/src'
+let g:netrw_dirhist_7='/mnt/s/windows/wsl/ubuntu/config/nvim'
+let g:netrw_dirhist_6='/mnt/s/windows/wsl/ubuntu/config/nvim/src'

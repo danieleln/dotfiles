@@ -1,0 +1,25 @@
+#!/usr/bin/bash
+
+# oh-my-posh's directory
+declare OMP_DIR="${HOME}/.config/oh-my-posh"
+# oh-my-posh's themes directory
+declare OMP_THEMES_DIR="${OMP_DIR}/themes"
+
+
+function SetOhMyPoshTheme ()
+{
+    eval "$(oh-my-posh init bash --config ${OMP_THEMES_DIR}/$1.omp.json)"
+}
+
+
+# nice omp themes:
+#   - 1_shell
+#   - amro
+#   - avit
+#   - blue-owl
+#   - onehalf.minimal
+#   - spaceship
+#   - tokyo
+#   - daniele.ubuntu
+
+SetOhMyPoshTheme "daniele.ubuntu"
