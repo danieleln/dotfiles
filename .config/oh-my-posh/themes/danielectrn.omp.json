@@ -140,7 +140,7 @@
                     "properties": {
                         "style": "agnoster_short",
                         "folder_separator_icon": "/",
-                        "max_depth": 2
+                        "max_depth": 3
                     },
 
                     "style": "plain",

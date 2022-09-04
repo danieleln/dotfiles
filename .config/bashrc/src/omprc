@@ -6,7 +6,7 @@ declare OMP_DIR="${HOME}/.config/oh-my-posh"
 declare OMP_THEMES_DIR="${OMP_DIR}/themes"
 
 
-function SetOhMyPoshTheme ()
+function OhMyPoshSetTheme ()
 {
     eval "$(oh-my-posh init bash --config ${OMP_THEMES_DIR}/$1.omp.json)"
 }
@@ -16,10 +16,10 @@ function SetOhMyPoshTheme ()
 #   - 1_shell
 #   - amro
 #   - avit
+#   - kali
 #   - blue-owl
 #   - onehalf.minimal
 #   - spaceship
 #   - tokyo
-#   - daniele.ubuntu
 
-SetOhMyPoshTheme "daniele.ubuntu"
+SetOhMyPoshTheme "danielectrn"
