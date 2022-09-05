@@ -4,19 +4,27 @@ At the moment, it contains configuration files for neovim, oh-my-posh and bashrc
 
 ## Folder Structure
 ```
-.config
- |
- |___ bashrc
- |     |___ src
- |
- |___ nvim
- |     |___ src
- |
- |___ oh-my-posh
-       |___ themes
+src
+ |___ .config               # ~/.config
+        |
+        |___ bashrc         # config files for ~/.bashrc
+        |     |___ src
+        |
+        |___ nvim           # config files for neovim
+        |     |___ src
+        |
+        |___ oh-my-posh     # config files for oh-my-posh
+              |___ themes
 ```
 
 ## Usage
-1. Download the repo and place the `.config` folder inside the home directory (it should be `~/.config`).
-
-2. Then, add the line: `source "${HOME}/.config/bashrc/bashrc"` to the `~/.bashrc` file (or `~/.bash_profile`, `~/.profile` ecc depending on the shell) 
+run the following commands
+```
+cd /tmp && \
+wget https://github.com/danielectrn/config-files/archive/refs/tags/v1.0.1.tar.gz && \
+tar -xf v1.0.1.tar.gz && \
+chmod u+x config-files-1.0.1/src/update_config_files && \
+./config-files-1.0.1/src/update_config_files && \
+rm -rf config-files-1.0.1 v1.0.1.tar.gz && \
+cd -
+```
