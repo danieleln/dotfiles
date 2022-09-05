@@ -26,6 +26,9 @@ alias .7='cd ../../../../../../..'
 alias vi='nvim'
 alias vim='nvim'
 
+# python habits
+alias quit='exit'
+
 # cmd habits
 alias cls='clear'
 
