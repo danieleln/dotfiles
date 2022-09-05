@@ -1,0 +1,34 @@
+#!/usr/bin/bash
+
+# echos the directory in which the script is
+function scriptdir ()
+{
+    echo $( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+}
+
+
+
+
+function updatedir ()
+{
+    # source and destination directory
+    declare srcdir=$1
+    declare dstdir=$2
+
+    for dir in $srcdir/*
+    do
+
+        if [ -d $dir ]
+        then
+            updatedir $dir $dstdir/$(basename $dir)
+        else
+            command mkdir -p $dstdir
+            declare srcfile=$dir
+            command cp $srcfile $dstdir
+        fi
+
+    done
+}
+
+declare -r HERE=$(scriptdir)
+updatedir $HERE/.config ~/.config
