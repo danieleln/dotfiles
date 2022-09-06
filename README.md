@@ -18,7 +18,7 @@ src
 ```
 
 ## Usage
-run the following commands
+1. Run the following commands
 ```
 cd /tmp && \
 wget https://github.com/danielectrn/config-files/archive/refs/tags/v1.1.0.tar.gz && \
@@ -28,3 +28,5 @@ chmod u+x config-files-1.1.0/src/update_config_files && \
 rm -rf config-files-1.0.1 v1.1.0.tar.gz && \
 cd -
 ```
+2. Add the following line `source "$HOME/.config/bashrc/bashrc"` to the file `~/.bashrc` (depending on the shell, the file might also be `~/.bash_profile`, `~/.profile`, ecc)
+
