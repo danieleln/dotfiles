@@ -22,4 +22,4 @@ function OhMyPoshSetTheme ()
 #   - spaceship
 #   - tokyo
 
-SetOhMyPoshTheme "danielectrn"
+OhMyPoshSetTheme "danielectrn"

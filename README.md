@@ -21,10 +21,10 @@ src
 run the following commands
 ```
 cd /tmp && \
-wget https://github.com/danielectrn/config-files/archive/refs/tags/v1.0.1.tar.gz && \
-tar -xf v1.0.1.tar.gz && \
-chmod u+x config-files-1.0.1/src/update_config_files && \
-./config-files-1.0.1/src/update_config_files && \
-rm -rf config-files-1.0.1 v1.0.1.tar.gz && \
+wget https://github.com/danielectrn/config-files/archive/refs/tags/v1.1.0.tar.gz && \
+tar -xf v1.1.0.tar.gz && \
+chmod u+x config-files-1.1.0/src/update_config_files && \
+./config-files-1.1.0/src/update_config_files && \
+rm -rf config-files-1.0.1 v1.1.0.tar.gz && \
 cd -
 ```
