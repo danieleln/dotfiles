@@ -7,8 +7,6 @@ function scriptdir ()
 }
 
 
-
-
 function updatedir ()
 {
     # source and destination directory
@@ -22,13 +20,15 @@ function updatedir ()
         then
             updatedir $dir $dstdir/$(basename $dir)
         else
-            command mkdir -p $dstdir
+            mkdir -p $dstdir
             declare srcfile=$dir
-            command cp $srcfile $dstdir
+            cp $srcfile $dstdir
         fi
 
     done
 }
+
+
 
 declare -r HERE=$(scriptdir)
 updatedir $HERE/.config ~/.config

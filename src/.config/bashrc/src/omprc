@@ -8,7 +8,31 @@ declare OMP_THEMES_DIR="${OMP_DIR}/themes"
 
 function OhMyPoshSetTheme ()
 {
-    eval "$(oh-my-posh init bash --config ${OMP_THEMES_DIR}/$1.omp.json)"
+
+    # private helper function
+    function __ompSetTheme ()
+    {
+        eval "$(oh-my-posh init $(oh-my-posh get shell) --config $1)"
+    }
+
+
+    if [ -f $1 ]; then
+        __ompSetTheme $1
+
+    elif [ -f ${OMP_THEMES_DIR}/$1 ]; then
+        __ompSetTheme ${OMP_THEMES_DIR}/$1
+
+    elif [ -f ${OMP_THEMES_DIR}/$1.omp.json ]; then
+        __ompSetTheme ${OMP_THEMES_DIR}/$1.omp.json
+
+    else
+        unset -f __ompSetTheme
+        >&2 echo "Unable to find oh-my-posh's theme \"$1\""
+        return 1
+    fi
+
+
+    unset -f __ompSetTheme
 }
 
 
