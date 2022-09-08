@@ -21,8 +21,13 @@ function updatedir ()
             updatedir $dir $dstdir/$(basename $dir)
         else
             mkdir -p $dstdir
+            chmod u+rwx $dstdir
+
             declare srcfile=$dir
             cp $srcfile $dstdir
+
+            declare dstfile=$dstdir/$(basename $srcfile)
+            chmod u+rwx $dstfile
         fi
 
     done
