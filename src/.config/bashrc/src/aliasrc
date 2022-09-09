@@ -34,3 +34,7 @@ alias cls='clear'
 
 # wsl only aliases
 alias explorer='explorer.exe'
+alias exit='clear; exit'
+
+# other aliases
+alias reload='source $HOME/.bashrc'
