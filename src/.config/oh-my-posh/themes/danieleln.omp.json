@@ -16,12 +16,12 @@
         "orange":    "#EA5521",
         "red":       "#EE3148",
 
-        "failure":     "p:red",
+        "failure":   "p:red",
         "success":   "p:green",
         "time":      "p:blue",
-        "primary":   "p:inkstone",
+        "primary":   "p:graphite",
         "secondary": "p:inkstone",
-        "tertiary": "p:porcelain",
+        "tertiary":  "p:porcelain",
         "accent-1":  "p:yellow",
         "accent-2":  "p:orange"
     },
