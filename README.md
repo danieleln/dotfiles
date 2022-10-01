@@ -1,4 +1,4 @@
-# config-files
+# dotfiles
 This repo contains configuration files I use in my Linux machines (a W10 desktop running Ubuntu22.04 on WSL and a laptop currently running Pop!\_OS).
 At the moment, it contains configuration files for neovim, oh-my-posh and bashrc
 
