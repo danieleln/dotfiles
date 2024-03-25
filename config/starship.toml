@@ -4,6 +4,7 @@
 # Get editor completions based on the config schema
 "$schema" = 'https://starship.rs/config-schema.json'
 
+
 add_newline = false
 
 
@@ -14,6 +15,7 @@ $git_commit\
 $git_state\
 $git_metrics\
 $git_status\
+$status\
 $character"""
 
 
@@ -40,12 +42,19 @@ ahead      = '⇡'
 behind     = '⇣'
 diverged   = '⇕'
 up_to_date = ''
-untracked  = '*'
+untracked  = '?'
 stashed    = '$'
 staged     = '+'
-modified   = '!'
-renamed    = '!'
+modified   = '~'
+renamed    = '~'
 deleted    = 'x'
+
+
+[status]
+style = 'bold red'
+format = '[$status]($style) '
+map_symbol = true
+disabled = false
 
 
 [character]
