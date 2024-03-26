@@ -75,6 +75,11 @@ abbr --add ino "arduino-cli"
 
 
 
+# {{ stow }}
+abbr --add stow-dotfiles "stow --target=$HOME/.config/ --dir=$HOME/workspace/repos/dotfiles/config/ ."
+
+
+
 # {{ miscellaneous }}
 abbr --add matrix "cmatrix"
 abbr --add nf     "clear; neofetch"
