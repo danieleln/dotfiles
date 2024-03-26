@@ -3,4 +3,4 @@ starship init fish | source
 
 
 # Initialized zoxide
-# zoxide init --cmd cd fish | source
+zoxide init --cmd cd fish | source
