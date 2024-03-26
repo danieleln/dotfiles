@@ -76,7 +76,7 @@ abbr --add ino "arduino-cli"
 
 
 # {{ stow }}
-abbr --add stow-dotfiles "stow --target=$HOME/.config/ --dir=$HOME/workspace/repos/dotfiles/config/ ."
+abbr --add stow-dotfiles "stow --target=$HOME/ --dir=$HOME/workspace/repos/dotfiles/ ."
 
 
 
