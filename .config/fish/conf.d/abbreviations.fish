@@ -49,6 +49,24 @@ abbr --add vi  "nvim"
 
 
 
+# {{ git abbr }}
+abbr --add g   "git"
+abbr --add gi  "git init"
+abbr --add gs  "git status"
+abbr --add gl  "git log"
+abbr --add ga  "git add"
+abbr --add gc  "git commit"
+abbr --add gp  "git push -u origin"
+abbr --add gp  "git push -u origin"
+abbr --add gd  "git diff"
+abbr --add gb  "git branch"
+abbr --add gcl "git clone"
+abbr --add gco "git checkout"
+abbr --add grm "git rm"
+abbr --add gmv "git mv"
+
+
+
 # {{ parent directory abbr }}
 abbr --add ..  "cd .."
 abbr --add ... "cd ../.."
