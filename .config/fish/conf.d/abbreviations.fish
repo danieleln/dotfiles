@@ -4,7 +4,7 @@
 # Replaces the normal ls command with exa
 function list --description "`ls` on steroids"
     clear
-    exa -1F --group-directories-first -s=extension --icons --color=always $argv
+    exa -1F --group-directories-first -s=extension --icons --color=always --ignore-glob=".git" $argv
     echo
 end
 
