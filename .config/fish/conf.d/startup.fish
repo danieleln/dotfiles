@@ -7,4 +7,4 @@ zoxide init --cmd cd fish | source
 
 
 # Loads omnichroma color palette
-source ~/.cache/omnichroma/out/colors.fish
+source ~/.cache/chromasync/out/colors.fish
