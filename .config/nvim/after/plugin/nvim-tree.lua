@@ -1,3 +1,5 @@
+-- See https://github.com/nvim-tree/nvim-tree.lua/blob/master/doc/nvim-tree-lua.txt
+
 api = require("nvim-tree.api")
 
 --[[ Plugin builtin mappings ]]
@@ -104,7 +106,13 @@ require("nvim-tree").setup({
 		group_empty = true,
 	},
 
+	git = {
+		enable = true,
+	},
+
 	filters = {
-		dotfiles = true,
+		dotfiles = false,
+		git_ignored = true,
+		-- custom = { 'node_modules' },
 	},
 })
