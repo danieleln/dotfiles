@@ -1,4 +1,4 @@
-@out: ~/.config/btop/themes/omnichroma.theme
+@out: ~/.config/btop/themes/chromasync.theme
 @fmt: #hex
 
 # Main background, empty for terminal default, need to be empty if you want transparent background
@@ -32,10 +32,10 @@ theme[meter_bg]="{BG:80:FG}"
 theme[proc_misc]="{FG}"
 
 # CPU, Memory, Network, Proc box outline colors
-theme[cpu_box]="{GRN:100:BG}" #Mauve
-theme[mem_box]="{BLU:100:BG}" #Green
-theme[proc_box]="{CYN:100:BG}" #Blue
-theme[net_box]="{MAG:100:BG}" #Maroon
+theme[cpu_box]="{GRN:100:BG}"
+theme[mem_box]="{CYN:100:BG}"
+theme[proc_box]="{MAG:100:BG}"
+theme[net_box]="{BLU:100:BG}"
 
 # Box divider line and small boxes line color
 theme[div_line]="{BG:80:FG}"
@@ -51,36 +51,36 @@ theme[cpu_mid]="{GRNH}"
 theme[cpu_end]="{RED}"
 
 # Mem/Disk free meter
-theme[free_start]="{BLU}"
-theme[free_mid]="{BLUH}"
-theme[free_end]="{RED}"
+theme[free_start]="{RED}"
+theme[free_mid]="{CYNH}"
+theme[free_end]="{CYN}"
 
 # Mem/Disk cached meter
-theme[cached_start]="{BLU}"
-theme[cached_mid]="{BLUH}"
+theme[cached_start]="{CYN}"
+theme[cached_mid]="{CYNH}"
 theme[cached_end]="{RED}"
 
 # Mem/Disk available meter
-theme[available_start]="{BLU}"
-theme[available_mid]="{BLUH}"
-theme[available_end]="{RED}"
+theme[available_start]="{RED}"
+theme[available_mid]="{CYNH}"
+theme[available_end]="{CYN}"
 
 # Mem/Disk used meter
-theme[used_start]="{BLU}"
-theme[used_mid]="{BLUH}"
-theme[used_end]="{GRN}"
+theme[used_start]="{CYN}"
+theme[used_mid]="{CYNH}"
+theme[used_end]="{RED}"
 
 # Download graph colors
-theme[download_start]="{MAG}"
-theme[download_mid]="{MAGH}"
+theme[download_start]="{BLU}"
+theme[download_mid]="{BLUH}"
 theme[download_end]="{RED}"
 
 # Upload graph colors
-theme[upload_start]="{MAG}"
-theme[upload_mid]="{MAGH}"
+theme[upload_start]="{BLU}"
+theme[upload_mid]="{BLUH}"
 theme[upload_end]="{RED}"
 
 # Process box color gradient for threads, mem and cpu usage
-theme[process_start]="{CYN}"
-theme[process_mid]="{CYNH}"
+theme[process_start]="{MAG}"
+theme[process_mid]="{MAGH}"
 theme[process_end]="{RED}"
