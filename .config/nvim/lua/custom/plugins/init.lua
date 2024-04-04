@@ -3,8 +3,4 @@
 --
 -- See the kickstart.nvim README for more information
 
-local REPOS = "~/workspace/projects/repos/"
-
-return {
-	{ dir = REPOS .. "chromasync.nvim" },
-}
+return {}
