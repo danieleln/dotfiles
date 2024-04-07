@@ -53,11 +53,15 @@ function unload_workspace(path)
 	path = vim.fs.normalize(path or PLUGIN_DIR)
 
 	-- Unloads all sub-packages
-	for pkg_name in vim.fs.dir(path) do
-		local lua_dir = path .. "/" .. pkg_name .. "/lua"
+	for dir in vim.fs.dir(path) do
+		-- Points to the `lua` directory inside the package
+		local lua_dir = path .. "/" .. dir .. "/lua"
 
-		if vim.fn.isdirectory(lua_dir) == 1 then
-			unload_package_tree(lua_dir)
+		for pkg_name in vim.fs.dir(lua_dir) do
+			local pkg_dir = lua_dir .. "/" .. pkg_name
+			if vim.fn.isdirectory(pkg_dir) then
+				unload_package_tree(pkg_dir, pkg_name)
+			end
 		end
 	end
 end
