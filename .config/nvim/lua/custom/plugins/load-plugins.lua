@@ -66,6 +66,6 @@ end
 vim.keymap.set("n", "<leader>wu", function()
 	unload_workspace()
 end, {
-	desc = "[W]orkspace [U]nload",
+	desc = "[W]orkspace [U]nload local plugins",
 	silent = true,
 })
