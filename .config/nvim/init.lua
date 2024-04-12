@@ -602,6 +602,7 @@ require("lazy").setup({
 				-- tsserver = {},
 				--
 
+				-- See: https://luals.github.io/wiki/
 				lua_ls = {
 					-- cmd = {...},
 					-- filetypes { ...},
@@ -625,6 +626,15 @@ require("lazy").setup({
 							},
 							-- You can toggle below to ignore Lua_LS's noisy `missing-fields` warnings
 							-- diagnostics = { disable = { 'missing-fields' } },
+							format = {
+								enable = true,
+								-- Put format options here
+								-- NOTE: the value should be String!
+								defaultConfig = {
+									indent_style = "space",
+									indent_size = "2",
+								},
+							},
 						},
 					},
 				},
