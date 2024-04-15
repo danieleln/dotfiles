@@ -254,15 +254,12 @@ vim.opt.rtp:prepend(lazypath)
 --
 -- NOTE: Here is where you install your plugins.
 require("lazy").setup({
-
-	-- pywal colorscheme
 	{
+		"danieleln/chromasync.nvim",
 		lazy = false, -- make sure we load this during startup if it is your main colorscheme
 		priority = 1000, -- make sure to load this before all the other start plugins
-		"AlphaTechnolog/pywal.nvim",
-		as = "pywal",
 		config = function()
-			-- vim.cmd.colorscheme("pywal")
+			vim.cmd.colorscheme("chromasync")
 		end,
 	},
 
@@ -691,6 +688,14 @@ require("lazy").setup({
 		},
 	},
 
+	{
+		"ckipp01/stylua-nvim",
+		run = "cargo install stylua",
+		config = function()
+			require("stylua-nvim").setup({ config_file = "stylua.toml" })
+		end,
+	},
+
 	{ -- Autocompletion
 		"hrsh7th/nvim-cmp",
 		event = "InsertEnter",
@@ -793,9 +798,8 @@ require("lazy").setup({
 		lazy = false, -- make sure we load this during startup if it is your main colorscheme
 		priority = 1000, -- make sure to load this before all the other start plugins
 		config = function()
-			-- ALREADY LOADING PY WAL
 			-- Load the colorscheme here
-			vim.cmd.colorscheme("tokyonight-night")
+			-- vim.cmd.colorscheme("tokyonight-night")
 
 			-- You can configure highlights by doing something like
 			vim.cmd.hi("Comment gui=none")
