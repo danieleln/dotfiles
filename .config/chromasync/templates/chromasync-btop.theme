@@ -1,4 +1,4 @@
-@out: ~/.config/btop/themes/chromasync.theme
+@dir: ~/.config/btop/themes/
 @fmt: #hex
 
 # Main background, empty for terminal default, need to be empty if you want transparent background
