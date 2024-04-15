@@ -76,11 +76,11 @@ end
 
 --[[ Other mappings ]]
 
--- [e]xplorer [t]oggle
-vim.keymap.set("n", "<leader>et", function()
+-- [e]xplorer
+vim.keymap.set("n", "<leader>e", function()
 	api.tree.reload()
 	api.tree.toggle()
-end, { desc = "nvim-tree: [t]oggle the [e]xplorer" })
+end, { desc = "nvim-tree: [e]xplorer" })
 
 -- [e]xplorer [f]ind
 vim.keymap.set("n", "<leader>ef", function()

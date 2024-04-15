@@ -64,6 +64,8 @@ function unload_workspace(path)
 			end
 		end
 	end
+
+	print("Unloaded local plugins")
 end
 
 -- Sets the keymap
