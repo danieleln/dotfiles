@@ -98,6 +98,11 @@ abbr --add stow-dotfiles "stow --target=$HOME/ --dir=$HOME/workspace/projects/re
 
 
 
+# {{ chromasync }}
+abbr --add cs "chromasync"
+
+
+
 # {{ miscellaneous }}
 abbr --add matrix "cmatrix"
 abbr --add nf     "clear; neofetch"
