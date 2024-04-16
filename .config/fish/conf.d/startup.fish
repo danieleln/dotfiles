@@ -6,5 +6,5 @@ starship init fish | source
 zoxide init --cmd cd fish | source
 
 
-# Loads omnichroma color palette
-source ~/.cache/chromasync/out/colors.fish
+# Loads chromasync color palette
+source "$HOME/.cache/chromasync/out/chromasync-fish.fish"
