@@ -52,7 +52,7 @@ abbr --add vi  "nvim"
 # {{ git abbr }}
 abbr --add g   "git"
 abbr --add gi  "git init"
-abbr --add gs  "git status"
+abbr --add gs  "clear; git status"
 abbr --add gl  "git log"
 abbr --add ga  "git add"
 abbr --add gc  "git commit"
