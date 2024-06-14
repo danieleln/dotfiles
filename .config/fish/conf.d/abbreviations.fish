@@ -5,7 +5,6 @@
 function list --description "`ls` on steroids"
     clear
     exa -1F --group-directories-first -s=extension --icons --color=always --ignore-glob=".git" $argv
-    echo
 end
 
 # Common ls abbreviations

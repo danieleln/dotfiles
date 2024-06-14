@@ -2,41 +2,57 @@
 
 
 # Get editor completions based on the config schema
-"$schema" = 'https://starship.rs/config-schema.json'
+'$schema' = 'https://starship.rs/config-schema.json'
 
 
-add_newline = false
+add_newline = true
 
 
 format = """
-$directory\
-$git_branch\
-$git_commit\
-$git_state\
-$git_metrics\
-$git_status\
 $status\
-$character"""
+\\[$username@$hostname $directory\
+$git_branch$git_commit$git_state$git_metrics$git_status\\]
+$character\
+"""
+
+
+[status]
+format = "[󱞩 exit code: $status](bold red)\n"
+map_symbol = true
+disabled = false
+
+
+[username]
+style_user = 'bold yellow'
+style_root = 'bold red'
+format = '[$user]($style)'
+disabled = false
+show_always = true
+
+
+[hostname]
+format = '[$hostname](bold purple)'
+ssh_only = false
+disabled = false
 
 
 [directory]
-truncation_length = 1
-# truncation_symbol = '…/'
-truncation_symbol = ''
-style = 'bold green'
+truncation_length = -1
+truncate_to_repo = true
+format = '[$path](bold green)'
 
 
 [git_branch]
-format = '[$symbol$branch(:$remote_branch)]($style) '
-style = 'bold purple'
 symbol = ''
+style = 'bold cyan'
+format = ' [$symbol$branch(:$remote_branch)]($style)'
 truncation_length = 16
 truncation_symbol = '…'
 
 
 [git_status]
-style = 'bold purple'
-format = '([$all_status$ahead_behind]($style) )'
+style = 'cyan'
+format = '\([$all_status$ahead_behind]($style)\)'
 conflicted = '='
 ahead      = '⇡'
 behind     = '⇣'
@@ -50,16 +66,9 @@ renamed    = '~'
 deleted    = 'x'
 
 
-[status]
-style = 'bold red'
-format = '[$status]($style) '
-map_symbol = true
-disabled = false
-
-
 [character]
 success_symbol            = '[](bold bright-black)' 
-error_symbol              = '[](bold red) '
+error_symbol              = '[](bold bright-black) '
 vimcmd_symbol             = '[](bold bright-blue)'
 vimcmd_replace_one_symbol = '[](bold bright-yellow)'
 vimcmd_replace_symbol     = '[](bold yellow)'
