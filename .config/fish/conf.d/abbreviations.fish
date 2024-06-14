@@ -45,6 +45,7 @@ abbr --add icat   "kitten icat"
 # {{ neovim abbr }}
 abbr --add vim "nvim"
 abbr --add vi  "nvim"
+abbr --add v   "nvim"
 
 
 
@@ -103,11 +104,6 @@ abbr --add cs "chromasync"
 
 
 # {{ miscellaneous }}
-abbr --add matrix "cmatrix"
-abbr --add nf     "clear; neofetch"
-
-abbr --add config "cd ~/.config"
-abbr --add conf   "cd ~/.config"
-
-abbr --add themes "kitten themes"
-abbr --add theme  "ranger ~/workspace/wallpapers/ --cmd=\"map <enter> shell -f ~/workspace/wallpapers/setw %d/%f\""
+abbr --add matrix  "cmatrix"
+abbr --add neofetch "fastfetch"
+abbr --add ff      "clear; fastfetch"
