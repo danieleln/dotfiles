@@ -2,34 +2,24 @@
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
 
   "logo": {
-    "padding": {
-      "top": 2
-    }
+    "source": "~/.config/fastfetch/logo.txt",
+    "type": "file",
   },
 
   "display": {
-    // "keyWidth": 7,
-    // "separator": " • ",
+    // Max length of the "key" field
     "keyWidth": 6,
+    // Separator character between the "key" field and the value of the property
     "separator": " ",
 
-    // Percentage bars
-    "bar": {
-      "charElapsed": "=",
-      "charTotal": "-",
-      "width": 13
-    },
+    // Removes percentages color highlighting
     "percent": {
-      // percentage type:
-      //   0: none
-      //   1: num
-      //   2: bar
-      //   3: bar + num
-      "type": 1
+      "type": 0,
     }
   },
 
   "modules": [
+    // Whoami
     "title",
     "break",
 
@@ -37,45 +27,34 @@
     {
       "type": "custom",
       "format": "╭Software",
-      "outputColor": "red",
+      "outputColor": "yellow",
     },
-    // {
-    //   "type": "custom",
-    //   // "format": "╭──Software",
-    //   "format": "╭─Software─╮",
-    //   "outputColor": "red",
-    // },
-    // {
-    //   "type": "custom",
-    //   "format": "│  ╭───────╯",
-    //   "outputColor": "red",
-    // },
     {
       "type": "kernel",
       "key": "│ │",
-      "keyColor": "red"
+      "keyColor": "yellow"
     },
     {
       // Operating System
       "type": "os",
       "key": "│ │",
-      "keyColor": "red"
+      "keyColor": "yellow"
     },
     {
       // Desktop Environment
       "type": "de",
       "key": "│ │",
-      "keyColor": "red"
+      "keyColor": "yellow"
     },
     {
       "type": "shell",
       "key": "│ │",
-      "keyColor": "red"
+      "keyColor": "yellow"
     },
     {
       "type": "custom",
       "format": "╰──╯",
-      "outputColor": "red",
+      "outputColor": "yellow",
     },
     "break",
 
@@ -83,57 +62,52 @@
     {
       "type": "custom",
       "format": "╭Hardware",
-      "outputColor": "magenta",
+      "outputColor": "green",
     },
-    // {
-    //   "type": "custom",
-    //   "format": "╭─Hardware─╮",
-    //   "outputColor": "magenta",
-    // },
-    // {
-    //   "type": "custom",
-    //   "format": "│  ╭───────╯",
-    //   "outputColor": "magenta",
-    // },
     {
       "type": "cpu",
       "key": "│ │", //󰻠
-      "keyColor": "magenta"
+      "format": "{1}",
+      "keyColor": "green"
     },
     {
       "type": "gpu",
       "hideType": "integrated",
       "key": "│󰢮 │",
-      "keyColor": "magenta",
+      "format": "{1} {2}",
+      "keyColor": "green",
     },
     {
       "type": "display",
       "key": "│󰹑 │",
-      "keyColor": "magenta"
+      "keyColor": "green"
     },
     {
       "type": "disk",
       "key": "│ │",
-      "keyColor": "magenta"
+      "format": "{3} of {2}",
+      "keyColor": "green"
     },
     {
       "type": "memory",
       "key": "│ │",
-      "keyColor": "magenta"
+      "format": "{3} of {2}",
+      "keyColor": "green"
     },
     {
       "type": "battery",
       "key": "│ │",
-      "keyColor": "magenta"
+      "format": "{4} {5}",
+      "keyColor": "green"
     },
     {
       "type": "custom",
       "format": "╰──╯",
-      "outputColor": "magenta",
+      "outputColor": "green",
     },
-    "poweradapter",
     "break",
 
+    // Colors
     {
       "type": "custom",
       "format": "╭Colors",
@@ -142,7 +116,6 @@
     {
       "type": "colors",
       "key": "│ │",
-      "paddingLeft": 1,
       "symbol": "circle",
       "keyColor": "blue",
     },
