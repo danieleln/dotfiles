@@ -37,7 +37,7 @@ abbr --add rm    "rm -I"       # Interactive, prompts once before removing
 
 
 # {{ cat abbr }}
-abbr --add cat    "batcat"
+abbr --add cat    "bat"
 abbr --add icat   "kitten icat"
 
 
@@ -94,7 +94,7 @@ abbr --add ino "arduino-cli"
 
 
 # {{ stow }}
-abbr --add stow-dotfiles "stow --no-folding --target=$HOME/ --dir=$HOME/workspace/projects/repos/dotfiles/ ."
+abbr --add stow-dotfiles "stow --no-folding --target=$HOME/ --dir=$HOME/workspace/projects/dotfiles/ ."
 
 
 
@@ -107,3 +107,4 @@ abbr --add cs "chromasync"
 abbr --add matrix  "cmatrix"
 abbr --add neofetch "fastfetch"
 abbr --add ff      "clear; fastfetch"
+abbr --add cmd     "command"
