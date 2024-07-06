@@ -103,9 +103,14 @@ abbr --add cs "chromasync"
 
 
 
+# {{ yt-dlp }}
+abbr --add yt2mp3  "yt-dlp -x --audio-format mp3"
+abbr --add yt2wav  "yt-dlp -x --audio-format wav"
+
+
+
 # {{ miscellaneous }}
 abbr --add matrix  "cmatrix"
 abbr --add neofetch "fastfetch"
 abbr --add ff      "clear; fastfetch"
 abbr --add cmd     "command"
-abbr --add yt2mp3  "yt-dlp -x --audio-format mp3"
