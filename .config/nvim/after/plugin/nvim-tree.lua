@@ -82,12 +82,6 @@ vim.keymap.set("n", "<leader>e", function()
 	api.tree.toggle()
 end, { desc = "nvim-tree: [e]xplorer" })
 
--- [e]xplorer [f]ind
-vim.keymap.set("n", "<leader>ef", function()
-	api.tree.find_file()
-	api.tree.focus()
-end, { desc = "nvim-tree: [f]ind file in [e]xplorer" })
-
 --[[ Loading options ]]
 require("nvim-tree").setup({
 	-- loading mappings
