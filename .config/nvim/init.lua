@@ -461,6 +461,9 @@ require("lazy").setup({
 			{ "j-hui/fidget.nvim", opts = {} },
 		},
 		config = function()
+			-- Setup Latex
+			require("lspconfig").texlab.setup({})
+
 			-- Brief Aside: **What is LSP?**
 			--
 			-- LSP is an acronym you've probably heard, but might not understand what it is.
@@ -864,7 +867,7 @@ require("lazy").setup({
 			---@diagnostic disable-next-line: missing-fields
 			require("nvim-treesitter.configs").setup({
 				prefer_git = true,
-				ensure_installed = { "bash", "c", "html", "lua", "markdown", "vim", "vimdoc", "rust" },
+				ensure_installed = { "bash", "c", "html", "lua", "markdown", "vim", "vimdoc", "rust", "latex" },
 				-- Autoinstall languages that are not installed
 				auto_install = true,
 				highlight = { enable = true },
@@ -900,7 +903,13 @@ require("lazy").setup({
 	-- { import = "custom.plugins" },
 
 	-- LaTeX syntax highlighting
-	"lervag/vimtex",
+	{
+		"lervag/vimtex",
+		config = function()
+			vim.g.vimtex_view_method = "zathura"
+			vim.g.vimtex_compiler_method = "latexmk"
+		end,
+	},
 })
 
 -- The line beneath this is called `modeline`. See `:help modeline`
