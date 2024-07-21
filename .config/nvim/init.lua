@@ -908,6 +908,38 @@ require("lazy").setup({
 		config = function()
 			vim.g.vimtex_view_method = "zathura"
 			vim.g.vimtex_compiler_method = "latexmk"
+
+			-- Auto-command to compile LaTeX on save
+			vim.api.nvim_create_autocmd("BufWritePost", {
+				pattern = "*.tex",
+				callback = function(ev)
+					-- Command to compile *.tex files
+					local cmd = { "pdflatex", "-halt-on-error", ev.file }
+					local cmd = table.concat(cmd, " ")
+
+					-- Run the command and print its return code
+					local handle = io.popen(cmd .. "; echo $?")
+
+					if handle == nil then
+						print(string.format("Can't spawn command %s", cmd))
+						return
+					end
+
+					-- Read and close the pipe
+					local result = handle:read("*a")
+					handle:close()
+
+					-- Extract the exit code from the last line of the result
+					local exit_code = tonumber(result:match("(%d+)%s*$")) or 0
+					-- Extract the command output, which is everything but the last line
+					local output = result:gsub("(%d+)%s*$", ""):gsub("%s+$", "")
+
+					-- Print the output only when compilation fails
+					if exit_code ~= 0 then
+						print(output)
+					end
+				end,
+			})
 		end,
 	},
 })
