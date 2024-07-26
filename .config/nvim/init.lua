@@ -908,14 +908,34 @@ require("lazy").setup({
 		config = function()
 			vim.g.vimtex_view_method = "zathura"
 			vim.g.vimtex_compiler_method = "latexmk"
+			vim.g.vimtex_mappings_enabled = 0
 
 			-- Auto-command to compile LaTeX on save
 			vim.api.nvim_create_autocmd("BufWritePost", {
 				pattern = "*.tex",
 				callback = function(ev)
+					-- Make the output directory
+					local OUTPUT_DIRECTORY_NAME = "out"
+					local current_file_dir = vim.fn.expand("%:p:h")
+					local output_directory = current_file_dir .. "/" .. OUTPUT_DIRECTORY_NAME
+
+					if vim.fn.isdirectory(output_directory) == 0 then
+						vim.fn.mkdir(output_directory)
+					end
+
+					if vim.fn.isdirectory(output_directory) == 0 then
+						print("Can't create output directory " .. output_directory)
+						return
+					end
+
 					-- Command to compile *.tex files
-					local cmd = { "pdflatex", "-halt-on-error", ev.file }
-					local cmd = table.concat(cmd, " ")
+					local cmd = table.concat({
+						"pdflatex",
+						"-halt-on-error",
+						"-output-directory",
+						output_directory,
+						ev.file,
+					}, " ")
 
 					-- Run the command and print its return code
 					local handle = io.popen(cmd .. "; echo $?")
