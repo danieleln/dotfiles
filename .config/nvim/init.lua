@@ -987,6 +987,13 @@ require("lazy").setup({
 			vim.api.nvim_create_autocmd("BufWritePost", {
 				pattern = "*.tex",
 				callback = function(ev)
+					-- By default, compile only tex files whose name is `main.tex`
+					if ev.file:sub(-8) ~= "main.tex" then
+						local answer = vim.fn.input("Do you want to compile `" .. ev.file .. "`? [N/y]")
+						if answer ~= "y" and answer ~= "Y" then
+							return
+						end
+					end
 					compile_tex(ev.file, OUTPUT_DIRECTORY_NAME)
 				end,
 			})
