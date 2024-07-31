@@ -75,3 +75,6 @@ end, {
 	desc = "[W]orkspace [U]nload local plugins",
 	silent = true,
 })
+
+-- Load chromasync colorscheme
+vim.cmd.colorscheme("chromasync")

@@ -906,6 +906,5 @@ require("lazy").setup({
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
 
--- Script that loads and unloads local plugins
-require("custom.plugins.load-plugins")
-vim.cmd.colorscheme("chromasync")
+-- Load the ./lua/autocmds/init.lua file
+require("autocmds")
