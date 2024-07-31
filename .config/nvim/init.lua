@@ -867,7 +867,18 @@ require("lazy").setup({
 			---@diagnostic disable-next-line: missing-fields
 			require("nvim-treesitter.configs").setup({
 				prefer_git = true,
-				ensure_installed = { "bash", "c", "html", "lua", "markdown", "vim", "vimdoc", "rust", "latex" },
+				ensure_installed = {
+					"gitcommit",
+					"bash",
+					"c",
+					"html",
+					"lua",
+					"markdown",
+					"vim",
+					"vimdoc",
+					"rust",
+					"latex",
+				},
 				-- Autoinstall languages that are not installed
 				auto_install = true,
 				highlight = { enable = true },
