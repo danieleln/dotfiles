@@ -103,14 +103,23 @@ abbr --add cs "chromasync"
 
 
 
+# {{ latex-wizard }}
+abbr --add lw "latex-wizard"
+
+
+
 # {{ yt-dlp }}
 abbr --add yt2mp3  "yt-dlp -x --audio-format mp3"
 abbr --add yt2wav  "yt-dlp -x --audio-format wav"
 
 
 
-# {{ miscellaneous }}
-abbr --add matrix  "cmatrix"
+# {{ fastfetch }}
 abbr --add neofetch "fastfetch"
 abbr --add ff      "clear; fastfetch"
+
+
+
+# {{ miscellaneous }}
+abbr --add matrix  "cmatrix"
 abbr --add cmd     "command"
