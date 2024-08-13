@@ -12,4 +12,8 @@ return {
 			vim.g.vimtex_mappings_enabled = 0
 		end,
 	},
+
+	{
+		"Makaze/AnsiEsc",
+	},
 }

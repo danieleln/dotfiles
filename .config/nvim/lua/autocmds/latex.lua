@@ -6,7 +6,15 @@ local create_buffer_in_tab = function(name)
 	-- Open the buffer in a new tab
 	vim.cmd("tabnew")
 	vim.api.nvim_set_current_buf(buf)
-	vim.cmd("tabprevious")
+
+	-- Enable ANSI colors
+	vim.cmd(":AnsiEsc")
+
+	-- Move the new tab to be the last tab
+	vim.cmd(":tabmove $")
+
+	-- Focus the last viewed tab
+	vim.cmd("tabnext #")
 
 	return buf
 end
