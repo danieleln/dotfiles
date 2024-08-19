@@ -6,7 +6,11 @@ starship init fish | source
 enable_transience
 
 
-# Initializes zoxide
+# Set the tab title (see ../functions/set_terminal_tab_title.fish)
+set_terminal_tab_title
+
+
+# Injtializes zoxide
 zoxide init --cmd cd fish | source
 
 
