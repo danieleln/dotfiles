@@ -1,7 +1,7 @@
-$1          ./$2o$3.
-$1       `,/$2+sso$3+.
-$1     `./$2/sssssss$3/.
-$1    .//$2ssssssssss$3+.
-$1 `.:/o$2ssssssssssss$3++
-$1 .:/o$2ssssssssssss$3s++
+$2          ./$1o$3.
+$2       `,/$1+sso$3+.
+$2     `./$1/sssssss$3/.
+$2    .//$1ssssssssss$3+.
+$2 `.:/o$1ssssssssssss$3++
+$2 .:/o$1ssssssssssss$3s++
 $3   /;::::+++++--*
