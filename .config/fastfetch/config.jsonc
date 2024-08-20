@@ -8,7 +8,9 @@
 
   "display": {
     // Max length of the "key" field
-    "keyWidth": 6,
+    "key": {
+      "width": 6
+    },
     // Separator character between the "key" field and the value of the property
     "separator": " ",
 
