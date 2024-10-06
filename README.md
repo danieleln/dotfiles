@@ -10,7 +10,7 @@ it symlinks all the files in the source directory to the target one.
 ```bash
 git clone https://github.com/danieleln/dotfiles.git
 cd dotfiles
-stow --no-folding --target="$HOME" .
+stow --target="$HOME/.config" .
 ```
 
 ## References
