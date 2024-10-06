@@ -115,8 +115,9 @@ abbr --add yt2wav  "yt-dlp -x --audio-format wav"
 
 
 # {{ fastfetch }}
-abbr --add neofetch "fastfetch"
-abbr --add ff      "clear; fastfetch"
+abbr --add fastfetch "fastfetch --logo $DVAR_USR_FASTFETCH_LOGO"
+abbr --add neofetch  "fastfetch --logo $DVAR_USR_FASTFETCH_LOGO"
+abbr --add ff        "clear; fastfetch --logo $DVAR_USR_FASTFETCH_LOGO"
 
 
 

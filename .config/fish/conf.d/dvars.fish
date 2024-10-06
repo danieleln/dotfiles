@@ -34,3 +34,11 @@ d_env_var USR_DIR_PROJECTS "$USR_DIR_PERSONAL/projects"
 d_env_var USR_DIR_DOTFILES "$USR_DIR_PROJECTS/dotfiles"
 
 mkdir -p $USR_DIR_WORK $USR_DIR_PERSONAL $USR_DIR_PROJECTS $USR_DIR_DOTFILES
+
+
+
+##################
+# User Variables #
+##################
+
+d_env_var USR_FASTFETCH_LOGO "$HOME/.config/fastfetch/ascii-distro-logos/$DVAR_SYS_OS_ID"
