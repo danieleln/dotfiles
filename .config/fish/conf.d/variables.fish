@@ -1,15 +1,15 @@
 #!/usr/bin/env fish
 
-set -l ENV_VAR_PREFIX "D_"
 
 # Set a universal environment variable if not already defined.
-# NOTE: variables are automatically prefixed with $ENV_VAR_PREFIX
+# NOTE: variable names are automatically prefixed with "DVAR_", to
+#       easily recognise them and not to override existing variables
 function d_env_var
-    set -l VAR_NAME "$ENV_VAR_PREFIX$argv[1]"
+    set -l VAR_NAME "DVAR_$argv[1]"
     set -l DEFAULT_VALUE $argv[2]
 
     if not set -q $VAR_NAME
-        set -Ux $VAR_NAME $DEFAULT_VALUE
+        set -U $VAR_NAME $DEFAULT_VALUE
     end
 end
 
