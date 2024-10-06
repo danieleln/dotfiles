@@ -30,10 +30,10 @@ d_env_var SYS_OS_ID (awk -F= '/^ID=/ {print $2}' /etc/os-release | tr -d '"')
 
 d_env_var USR_DIR_WORK     "$HOME/work"
 d_env_var USR_DIR_PERSONAL "$HOME/personal"
-d_env_var USR_DIR_PROJECTS "$USR_DIR_PERSONAL/projects"
-d_env_var USR_DIR_DOTFILES "$USR_DIR_PROJECTS/dotfiles"
+d_env_var USR_DIR_PROJECTS "$DVAR_USR_DIR_PERSONAL/projects"
+d_env_var USR_DIR_DOTFILES "$DVAR_USR_DIR_PROJECTS/dotfiles"
 
-mkdir -p $USR_DIR_WORK $USR_DIR_PERSONAL $USR_DIR_PROJECTS $USR_DIR_DOTFILES
+mkdir -p $DVAR_USR_DIR_WORK $DVAR_USR_DIR_PERSONAL $DVAR_USR_DIR_PROJECTS $DVAR_USR_DIR_DOTFILES
 
 
 
