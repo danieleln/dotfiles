@@ -9,7 +9,7 @@ function d_env_var
     set -l DEFAULT_VALUE $argv[2]
 
     if not set -q $VAR_NAME
-        set -U $VAR_NAME $DEFAULT_VALUE
+        set -Ux $VAR_NAME $DEFAULT_VALUE
     end
 end
 
