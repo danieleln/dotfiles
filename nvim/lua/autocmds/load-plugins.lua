@@ -1,4 +1,4 @@
-local PLUGIN_DIR = "~/workspace/projects/nvim-plugins"
+local PLUGIN_DIR = os.getenv("DVAR_USR_DIR_PROJECTS") .. "/nvim-plugins"
 
 -- Adds all directories inside PLUGIN_DIR to the rtp
 for plugin_name in vim.fs.dir(PLUGIN_DIR) do
