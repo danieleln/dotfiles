@@ -1,8 +1,10 @@
 # Initializes starship prompt
-function starship_transient_prompt_func
-  starship module character
-end
 starship init fish | source
+
+# Enable starship transient prompt (see https://starship.rs/advanced-config/)
+function starship_transient_prompt_func
+  echo $DVAR_USR_VAR_PROMPT_SYMBOL
+end
 enable_transience
 
 

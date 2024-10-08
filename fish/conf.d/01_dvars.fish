@@ -28,3 +28,4 @@ mkdir -p $DVAR_USR_DIR_WORK $DVAR_USR_DIR_PERSONAL $DVAR_USR_DIR_PROJECTS $DVAR_
 ##################
 
 dvar --default USR_FASTFETCH_LOGO "$HOME/.config/fastfetch/ascii-distro-logos/$DVAR_SYS_OS_ID"
+dvar --default USR_VAR_PROMPT_SYMBOL '🚀'

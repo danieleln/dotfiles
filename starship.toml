@@ -11,7 +11,7 @@ add_newline = true
 format = """
 $status\
 \\[$username@$hostname $directory$git_branch$git_commit$git_state$git_metrics$git_status\\]
-$character\\$\
+$character ${env_var.PROMPT_SYMBOL}\
 """
 
 
@@ -66,9 +66,15 @@ deleted    = 'x'
 
 
 [character]
-success_symbol            = '[Ins](bold bright-black)' 
+success_symbol            = '[Ins](bold bright-black)'
 error_symbol              = '[Ins](bold bright-black) '
 vimcmd_symbol             = '[Nor](bold bright-blue)'
 vimcmd_replace_one_symbol = '[Re1](bold bright-yellow)'
 vimcmd_replace_symbol     = '[Re+](bold yellow)'
 vimcmd_visual_symbol      = '[Vis](bold purple)'
+
+
+[env_var.PROMPT_SYMBOL]
+variable = "DVAR_USR_VAR_PROMPT_SYMBOL"
+default = "$"
+format = "[$env_value](bold normal)"
