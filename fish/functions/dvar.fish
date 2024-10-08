@@ -2,7 +2,7 @@
 
 function dvar --description="manipulate dvars"
 
-  argparse --name='dvar' --max-args=2 'h/help' 'd/default' 'e/erase' 'q/query' -- $argv
+  argparse --name='dvar' 'h/help' 'd/default' 'e/erase' 'q/query' -- $argv
   or return
 
   # Help message
@@ -67,8 +67,7 @@ function dvar --description="manipulate dvars"
   end
 
   # Set the variable
-  set -l DVAR_VALUE "$argv[2]"
-  set -Ux "$DVAR_NAME" "$DVAR_VALUE"
+  set -Ux "$DVAR_NAME" $argv[2..(count $argv)]
 
 end
 
