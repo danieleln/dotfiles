@@ -5,15 +5,6 @@ function dvar --description="manipulate dvars"
   argparse --name='dvar' --max-args=2 'h/help' 'd/default' 'e/erase' 'q/query' -- $argv
   or return
 
-  set -l NAME "$argv[1]"
-  set -l VALUE "$argv[2]"
-  set -l PREFIX "DVAR_"
-
-  # Prepend the prefix to the var name if missing
-  if not string match -r "^$PREFIX+" "$NAME" > /dev/null
-    set NAME "$PREFIX$NAME"
-  end
-
   # Help message
   if set -q _flag_help
     echo -e "dvar - manipulate dvars"
@@ -30,42 +21,54 @@ function dvar --description="manipulate dvars"
     return
   end
 
-  # Erase variable
-  if set -q _flag_erase
-    if set -q $NAME
-      set -e $NAME
-      return
-    else
-      echo "Variable `$NAME` is not defined."
-      return 1
-    end
-  end
-
-  # Check if variable $NAME is defined
-  if set -q _flag_query
-    set -q "$NAME"
-    return
-  end
-
-  # Read the value of variable $NAME
+  # Look for the name of the variable
   if test (count $argv) -eq 0
     echo "Variable name is missing. See `dvar --help`."
     return 1
   end
 
-  # Read the value of variable $NAME
+  set -l DVAR_NAME "$argv[1]"
+  set -l DVAR_PREFIX "DVAR_"
+
+  # Prepend DVAR_PREFIX to the variable name if missing
+  if not string match -r "^$DVAR_PREFIX+" "$DVAR_NAME" > /dev/null
+    set DVAR_NAME "$DVAR_PREFIX$DVAR_NAME"
+  end
+
+  # Erase the variable
+  if set -q _flag_erase
+    if set -q $DVAR_NAME
+      set -e $DVAR_NAME
+      return 0
+    end
+
+    echo "Variable `$DVAR_NAME` is not defined."
+    return 1
+  end
+
+  # Check if variable $DVAR_NAME is defined
+  if set -q _flag_query
+    if set -q "$DVAR_NAME"
+      return 0
+    end
+
+    return 1
+  end
+
+  # Read the value of variable $DVAR_NAME
   if test (count $argv) -eq 1
-    eval echo \$$NAME
-    return
+    eval "echo \$$DVAR_NAME"
+    return 0
   end
 
   # If there is the default flag and the variable exists already, do nothing
-  if set -q _flag_default; and set -q "$NAME"
+  if set -q _flag_default; and set -q "$DVAR_NAME"
     return
   end
 
   # Set the variable
-  set -Ux "$NAME" "$VALUE"
+  set -l DVAR_VALUE "$argv[2]"
+  set -Ux "$DVAR_NAME" "$DVAR_VALUE"
 
 end
 
