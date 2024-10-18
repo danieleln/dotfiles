@@ -121,6 +121,11 @@ abbr --add ff        "clear; fastfetch --logo $DVAR_USR_FASTFETCH_LOGO"
 
 
 
+# {{ python }}
+abbr --add py "python3"
+
+
+
 # {{ miscellaneous }}
 abbr --add matrix  "cmatrix"
 abbr --add cmd     "command"
