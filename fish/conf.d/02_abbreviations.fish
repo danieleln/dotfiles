@@ -46,6 +46,9 @@ abbr --add icat   "kitten icat"
 abbr --add vim "nvim"
 abbr --add vi  "nvim"
 abbr --add v   "nvim"
+abbr --add vim. "nvim ."
+abbr --add vi.  "nvim ."
+abbr --add v.   "nvim ."
 
 
 
